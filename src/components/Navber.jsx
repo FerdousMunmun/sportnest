@@ -73,21 +73,21 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             </Link>
 
             <Link
-              href="/facilities"
+              href="/courses"
               className="font-medium text-slate-700 hover:text-green-600 transition-colors"
             >
               All Facilities
             </Link>
 
             <Link
-              href="/my-bookings"
+              href="/add-course"
               className="font-medium text-slate-700 hover:text-green-600 transition-colors"
             >
               My Bookings
             </Link>
 
             <Link
-              href="/add-facility"
+              href="/dashboard"
               className="font-medium text-slate-700 hover:text-green-600 transition-colors"
             >
               Add Facility
