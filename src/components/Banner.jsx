@@ -1,39 +1,42 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
 
 const Banner = () => {
   return (
-    <section className="relative bg-gradient-to-r from-green-600 to-emerald-500 text-white overflow-hidden my-4">
-      
-      <div className="max-w-7xl mx-auto px-6 py-28 flex flex-col items-center text-center">
-        
-        <p className="uppercase tracking-[6px] text-sm font-semibold text-green-100 mb-4">
-          SportNest
-        </p>
+    <section className="relative h-[650px] w-full overflow-hidden my-5">
+      <Image
+        src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600"
+        alt="SportNest Banner"
+        fill
+        priority
+        className="object-cover"
+      />
 
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight max-w-4xl">
-          Book Your Favorite Sports Facility Anytime
-        </h1>
+      <div className="absolute inset-0 bg-black/60"></div>
 
-        <p className="mt-6 text-lg md:text-xl text-green-50 max-w-2xl">
-          Discover premium sports venues, manage bookings easily, 
-          and enjoy a seamless sports facility booking experience with SportNest.
-        </p>
+      <div className="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center">
+        <div className="max-w-2xl text-white">
+          <p className="uppercase tracking-[5px] text-orange-400 font-bold mb-4">
+            Welcome to SportNest
+          </p>
 
-        <div className="mt-10 flex items-center gap-4">
+          <h1 className="text-4xl md:text-6xl font-black leading-tight">
+            Book Your Favorite Sports Facility
+          </h1>
+
+          <p className="mt-6 text-lg text-slate-200 leading-relaxed">
+            Explore premium sports venues, check availability, and book your
+            perfect facility with a smooth and simple experience.
+          </p>
+
           <Link
             href="/facilities"
-            className="px-8 py-4 bg-white text-green-700 font-bold rounded-full hover:bg-green-100 transition-all duration-300 shadow-lg"
+            className="inline-block mt-10 px-8 py-4 rounded-full bg-orange-500 text-white font-bold hover:bg-orange-600 transition"
           >
             Explore Facilities
           </Link>
         </div>
       </div>
-
-      {/* Background Blur Effect */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-black/10 rounded-full blur-3xl"></div>
     </section>
   );
 };

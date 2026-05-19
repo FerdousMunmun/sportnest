@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -14,43 +12,57 @@ const Footer = () => {
       
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         
-        {/* Logo & Description */}
+        {/* Logo & About */}
         <div>
-          <h2 className="text-3xl font-extrabold text-green-500">
-            SportNest
-          </h2>
+          <div className="flex items-center gap-3">
+            
+            <div className="w-12 h-12 rounded-full bg-black border-4 border-orange-500 flex items-center justify-center">
+              <span className="text-white font-black text-lg">
+                SN
+              </span>
+            </div>
 
-          <p className="mt-4 text-slate-400 leading-relaxed">
-            SportNest is a modern sports facility booking platform
-            where users can explore, book, and manage sports venues
-            easily and efficiently.
+            <div>
+              <h2 className="text-3xl font-black text-white">
+                SportNest
+              </h2>
+
+              <p className="text-sm text-slate-400">
+                Sports Facility Booking
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-6 text-slate-400 leading-relaxed">
+            SportNest helps sports lovers discover, book, and manage premium sports facilities with a fast and seamless experience.
           </p>
 
           <div className="flex items-center gap-4 mt-6">
+            
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-orange-500 transition flex items-center justify-center"
             >
               <FaFacebookF />
             </a>
 
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-orange-500 transition flex items-center justify-center"
             >
               <FaInstagram />
             </a>
 
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-orange-500 transition flex items-center justify-center"
             >
               <FaTwitter />
             </a>
 
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-slate-800 hover:bg-orange-500 transition flex items-center justify-center"
             >
               <FaLinkedinIn />
             </a>
@@ -65,34 +77,25 @@ const Footer = () => {
 
           <ul className="space-y-3 text-slate-400">
             <li>
-              <Link href="/" className="hover:text-green-500 transition-colors">
+              <Link href="/" className="hover:text-orange-500 transition">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/facilities"
-                className="hover:text-green-500 transition-colors"
-              >
+              <Link href="/facilities" className="hover:text-orange-500 transition">
                 All Facilities
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/my-bookings"
-                className="hover:text-green-500 transition-colors"
-              >
+              <Link href="/my-bookings" className="hover:text-orange-500 transition">
                 My Bookings
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/add-facility"
-                className="hover:text-green-500 transition-colors"
-              >
+              <Link href="/add-facility" className="hover:text-orange-500 transition">
                 Add Facility
               </Link>
             </li>
@@ -106,20 +109,20 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-3 text-slate-400">
-            <li className="hover:text-green-500 transition-colors cursor-pointer">
-              Online Booking
+            <li className="hover:text-orange-500 transition cursor-pointer">
+              Facility Booking
             </li>
 
-            <li className="hover:text-green-500 transition-colors cursor-pointer">
-              Facility Management
+            <li className="hover:text-orange-500 transition cursor-pointer">
+              Venue Management
             </li>
 
-            <li className="hover:text-green-500 transition-colors cursor-pointer">
-              Event Scheduling
+            <li className="hover:text-orange-500 transition cursor-pointer">
+              Sports Scheduling
             </li>
 
-            <li className="hover:text-green-500 transition-colors cursor-pointer">
-              Membership Access
+            <li className="hover:text-orange-500 transition cursor-pointer">
+              Online Reservations
             </li>
           </ul>
         </div>
@@ -127,7 +130,7 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <h3 className="text-xl font-bold mb-5">
-            Contact Info
+            Contact Us
           </h3>
 
           <div className="space-y-4 text-slate-400">
@@ -137,7 +140,7 @@ const Footer = () => {
 
             <p>📧 support@sportnest.com</p>
 
-            <p>🕒 Open: 9AM - 11PM</p>
+            <p>🕒 Open Daily: 8AM - 12AM</p>
           </div>
         </div>
       </div>
@@ -146,16 +149,16 @@ const Footer = () => {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
           
-          <p className="text-slate-500 text-sm text-center md:text-left">
+          <p className="text-slate-500 text-sm">
             © 2026 SportNest. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-6 text-sm text-slate-500">
-            <Link href="#" className="hover:text-green-500 transition-colors">
+            <Link href="#" className="hover:text-orange-500 transition">
               Privacy Policy
             </Link>
 
-            <Link href="#" className="hover:text-green-500 transition-colors">
+            <Link href="#" className="hover:text-orange-500 transition">
               Terms & Conditions
             </Link>
           </div>
