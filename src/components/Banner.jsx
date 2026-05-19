@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <section className="relative bg-gradient-to-r from-green-600 to-emerald-500 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-r from-green-600 to-emerald-500 text-white overflow-hidden my-4">
       
       <div className="max-w-7xl mx-auto px-6 py-28 flex flex-col items-center text-center">
         
