@@ -1,3 +1,4 @@
+import BookingCard from '@/components/BookingCard'
 import { DeleteAlert } from '@/components/DeleteAlert'
 import EditModal from '@/components/EditModal'
 import Image from 'next/image'
@@ -15,7 +16,7 @@ facilityName,
 location,
 category,
 slots,
-bookingDate,imageUrl,price,
+bookingDate,imageUrl,
 description} = facility
   return (
      <section className="max-w-7xl mx-auto px-4 py-16">
@@ -81,8 +82,8 @@ description} = facility
                 {slots}
               </p>
             </div>
-
-            <div className="bg-slate-100 rounded-2xl p-5 col-span-2">
+ <BookingCard facility={facility}/>
+            {/* <div className="bg-slate-100 rounded-2xl p-5 col-span-2">
               <h3 className="text-sm text-slate-500 font-semibold">
                 Price Per Hour
               </h3>
@@ -90,15 +91,14 @@ description} = facility
               <p className="text-xl font-black text-orange-500 mt-2">
                 ${price}
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Button */}
-          <Link href={''}><button className="w-full md:w-auto px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-300 shadow-lg">
-            Book This Facility
-          </button></Link>
-
+     
         </div>
+
+       
       </div>
     </section>
   )
