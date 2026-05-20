@@ -1,4 +1,7 @@
+import { DeleteAlert } from '@/components/DeleteAlert'
+import EditModal from '@/components/EditModal'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { CiLocationOn } from 'react-icons/ci'
 import { FaUserGroup } from 'react-icons/fa6'
@@ -12,10 +15,15 @@ facilityName,
 location,
 category,
 slots,
-bookingDate,imageUrl,pricePerHour,
+bookingDate,imageUrl,price,
 description} = facility
   return (
      <section className="max-w-7xl mx-auto px-4 py-16">
+        <div className="flex  items-center gap-3 justify-end mt-5 mb-3">
+        <EditModal facility={facility} />
+        <DeleteAlert facility={facility}/>
+        {/* <DeleteAlert destination={destination}/> */}
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -80,15 +88,15 @@ description} = facility
               </h3>
 
               <p className="text-xl font-black text-orange-500 mt-2">
-                ${pricePerHour}/hr
+                ${price}
               </p>
             </div>
           </div>
 
           {/* Button */}
-          <button className="w-full md:w-auto px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-300 shadow-lg">
+          <Link href={''}><button className="w-full md:w-auto px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-300 shadow-lg">
             Book This Facility
-          </button>
+          </button></Link>
 
         </div>
       </div>
