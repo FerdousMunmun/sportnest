@@ -1,5 +1,7 @@
+'use client'
+
 import { Button, FieldError, Input, Label, ListBox, TextField,Select, TextArea, Card } from '@heroui/react'
-import React from 'react'
+import { addToast } from "@heroui/react";
 
 const AddFacilityPage = () => {
 
@@ -9,6 +11,23 @@ const AddFacilityPage = () => {
         const facility = Object.fromEntries(formData.entries())
 
         console.log(facility)
+
+       const res = await fetch('http://localhost:5000/facilities',{
+          method: 'POST',
+          headers:{
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(facility)
+        })
+        const data = await res.json()
+
+//         if (data?.insertedId) {
+//   if (data?.insertedId) {
+//   toast.success("Facility added successfully!");
+// }
+// }
+        
+   }
   return (
     <div className='p-5 max-w-7xl mx-auto'>
      <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight my-5">
@@ -19,6 +38,7 @@ const AddFacilityPage = () => {
 </h1>
       <Card>
         <form
+        onSubmit={onSubmit}
             className="p-10 space-y-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -55,6 +75,10 @@ const AddFacilityPage = () => {
                     <ListBox>
                       <ListBox.Item id="Footbal" textValue="Footbal">
                        Footbal
+                        <ListBox.ItemIndicator />
+                      </ListBox.Item>
+                      <ListBox.Item id="Baskball" textValue="Baskball">
+                      Baskball
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
                       <ListBox.Item id="Badminton" textValue="Badminton">
@@ -94,8 +118,8 @@ const AddFacilityPage = () => {
               </TextField>
 
               {/* Duration */}
-              <TextField name="duration" isRequired>
-                <Label>Duration</Label>
+              <TextField name="slots" isRequired>
+                <Label>slots</Label>
                 <Input
                   placeholder="7 Days / 6 Nights"
                   className="rounded-2xl"
@@ -105,9 +129,9 @@ const AddFacilityPage = () => {
 
               {/* Departure Date */}
               <div className="md:col-span-2">
-                <TextField name="slots" type="number" isRequired>
-                  <Label>slots</Label>
-                  <Input type="1234" className="rounded-2xl" />
+                <TextField name="bookingDate" type="date" isRequired>
+                  <Label>Booking Date</Label>
+                  <Input type="date" className="rounded-2xl" />
                   <FieldError />
                 </TextField>
               </div>
