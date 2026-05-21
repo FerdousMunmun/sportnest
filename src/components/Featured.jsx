@@ -15,7 +15,7 @@ const Featured = async () => {
                     <p className="text-muted">At SportNest, we provide a modern and user-friendly platform for sports lovers to discover and book the best sports venues with ease. Our goal is to make sports accessible, convenient, and enjoyable for everyone.</p>
                 </div>
 
-                <Link href={'/all-facilities'}><Button variant="outline" className={'rounded-none border-orange-600 border-2 text-cyan-500'}>All Destinations</Button></Link>
+                <Link href={'/all-facilities'}><Button variant="outline" className={'rounded-none border-black border-2 text-orange-600'}>All Facilities</Button></Link>
             </div>
 
 
