@@ -5,7 +5,14 @@ import { Avatar, Button } from '@heroui/react'
 import Link from 'next/link'
 import React from 'react'
 
+
 const Navber = () => {
+
+
+
+
+
+
   const { 
         data: session, 
     } = authClient.useSession() 
@@ -81,6 +88,9 @@ const Navber = () => {
               }
          
 </ul>
+
+
+        
     
 
     </nav>

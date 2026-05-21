@@ -15,7 +15,7 @@ import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
-const SignUpPage = () => {
+const RegisterPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -49,7 +49,7 @@ const SignUpPage = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="text-center my-3">
-        <h1 className="text-2xl font-bold">Create Account</h1>
+        <h1 className="text-2xl font-bold">Register Now</h1>
         <p>Play Anytime, Anywhere with SportNest</p>
       </div>
       <Card className="border rounded-none">
@@ -120,15 +120,10 @@ const SignUpPage = () => {
         <div>
             <Button onClick={handleGoogleSignin} variant="outline" className={'w-full rounded-none'}><FcGoogle /> Sign in with Google</Button>
         </div>
-        <p className="mt-4 text-center text-sm">
-  Don&apos;t have an account?{" "}
-  <Link href="/register" className="text-blue-600 underline">
-    Register
-  </Link>
-</p>
+        
       </Card>
     </div>
   );
 };
 
-export default SignUpPage;
+export default RegisterPage;
