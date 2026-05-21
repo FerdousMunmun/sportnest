@@ -35,7 +35,7 @@ const BookingCard = ({ facility }) => {
         method: "POST",
         headers: {
             'content-type': 'application/json',
-            // authorization: `Bearer ${tokenData?.token}`
+            authorization: `Bearer ${tokenData?.token}`
         },
         body: JSON.stringify(bookingData),
     })

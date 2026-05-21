@@ -1,6 +1,8 @@
 import BookingCard from '@/components/BookingCard'
 import { DeleteAlert } from '@/components/DeleteAlert'
 import EditModal from '@/components/EditModal'
+import { auth } from '@/lib/auth'
+import { headers } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -9,7 +11,15 @@ import { FaUserGroup } from 'react-icons/fa6'
 
 const FacilitiesDetailsPage = async ({params}) => {
     const {id} = await params
-    const res = await fetch(`http://localhost:5000/facilities/${id}`)
+    const {token} = await auth.api.getToken({
+      headers: await headers(),
+    })
+    console.log(token)
+    const res = await fetch(`http://localhost:5000/facilities/${id}`,{
+      headers:{
+        authorization: `Bearer ${token}`,
+      },
+    });
     const facility = await res.json()
      const {_id,
 facilityName,

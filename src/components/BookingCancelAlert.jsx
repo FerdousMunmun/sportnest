@@ -4,7 +4,23 @@ import { authClient } from "@/lib/auth-client";
 import { TrashBin } from "@gravity-ui/icons";
 import { AlertDialog, Button } from "@heroui/react";
 
-const BookingCancelAlert = () => {
+const BookingCancelAlert = ({bookingId}) => {
+    const handleCancelBooking = async() =>{
+        const {data:tokenData} = await authClient.token()
+        const res = await fetch (`http://localhost:5000/booking/${bookingId}`,{
+            method: "DELETE",
+            headers: {
+                "content-type": "application/json",
+                authorization: `Bearer ${tokenData?.token}`
+            }
+        }); 
+        const data = await res.json();
+        console.log(data);
+        window.location.reload();
+        
+    }
+
+
   return (
      <AlertDialog>
       <Button
@@ -21,7 +37,7 @@ const BookingCancelAlert = () => {
             <AlertDialog.Header>
               <AlertDialog.Icon status="danger" />
               <AlertDialog.Heading>
-                Cancel Project permanently?
+                Cancel Booking permanently?
               </AlertDialog.Heading>
             </AlertDialog.Header>
             <AlertDialog.Body>
@@ -30,7 +46,7 @@ const BookingCancelAlert = () => {
               <Button slot="close" variant="tertiary">
                 Cancel
               </Button>
-              <Button  slot="close" variant="danger">
+              <Button onClick={handleCancelBooking} slot="close" variant="danger">
                 Delete
               </Button>
             </AlertDialog.Footer>
