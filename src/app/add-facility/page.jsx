@@ -12,7 +12,7 @@ const AddFacilityPage = () => {
 
         console.log(facility)
 
-       const res = await fetch(`${process.env./facilities,{
+       const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/facilities`,{
           method: 'POST',
           headers:{
             'content-type': 'application/json'

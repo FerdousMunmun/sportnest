@@ -16,7 +16,9 @@ const Navber = () => {
   };
     
   return (
-    <nav className=' flex justify-between items-center my-4'>
+
+    <div className="">
+       <nav className='max-w-7xl mx-auto flex justify-between items-center my-4'>
 
       <div className="">
        <Link href="/" className="flex items-center gap-3">
@@ -82,6 +84,10 @@ const Navber = () => {
     
 
     </nav>
+    </div>
+    
+     
+    
   )
 }
 
