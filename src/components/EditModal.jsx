@@ -32,7 +32,7 @@ const onSubmit = async (e) => {
     const formData = new FormData(e.currentTarget);
     const facility = Object.fromEntries(formData.entries());  
     console.log(facility);
-    const res = await fetch(`http://localhost:5000/facilities/${_id}`,{
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/facilities/${_id}`,{
       method: 'PATCH',
       headers:{
         'content-type':'application/json',
