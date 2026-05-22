@@ -21,6 +21,7 @@ const FacilitiesDetailsPage = async ({params}) => {
       },
     });
     const facility = await res.json()
+    console.log(facility)
      const {_id,
 facilityName,
 location,
@@ -41,7 +42,7 @@ description} = facility
         {/* Left Side Image */}
         <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl">
           <Image
-            src={imageUrl}
+            src={imageUrl || null}
             alt={facilityName}
             fill
             className="object-cover"
