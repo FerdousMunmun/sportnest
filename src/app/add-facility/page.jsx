@@ -2,6 +2,7 @@
 
 import { Button, FieldError, Input, Label, ListBox, TextField,Select, TextArea, Card } from '@heroui/react'
 import { addToast } from "@heroui/react";
+import toast from 'react-hot-toast';
 
 const AddFacilityPage = () => {
 
@@ -21,11 +22,11 @@ const AddFacilityPage = () => {
         })
         const data = await res.json()
 
-//         if (data?.insertedId) {
-//   if (data?.insertedId) {
-//   toast.success("Facility added successfully!");
-// }
-// }
+        if (data?.insertedId) {
+  if (data?.insertedId) {
+  toast.success("Facility added successfully!");
+}
+}
         
    }
   return (

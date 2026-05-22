@@ -69,9 +69,11 @@ const BookingCard = ({ facility }) => {
       </DateField>
 
       {/* <Button className={"w-full rounded-none bg-cyan-500"}>Book Now</Button> */}
+       <Link href={'/my-bookings'}>
        <Button onClick={handleBooking} className="w-full md:w-auto px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition duration-300 shadow-lg">
             Book This Facility
           </Button>
+       </Link>
     </Card>
   );
 };

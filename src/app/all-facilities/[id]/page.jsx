@@ -1,3 +1,4 @@
+import ManageFacilitiesPage from '@/app/manage-facilities/page'
 import BookingCard from '@/components/BookingCard'
 import { DeleteAlert } from '@/components/DeleteAlert'
 import EditModal from '@/components/EditModal'

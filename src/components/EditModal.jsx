@@ -48,7 +48,7 @@ console.log(data);
     <Modal>
 
       <Button variant="outline" className={"rounded-none"}>
-          <BiEdit /> Edit
+          <BiEdit /> Manage Facilities
         </Button>
 
       <Modal.Backdrop>
@@ -195,16 +195,6 @@ console.log(data);
               </div>
             </div>
 
-            {/* Buttons */}
-
-            {/* <Button
-              type="submit"
-              variant="outline"
-             
-              className=" rounded-none w-full bg-orange-500 text-white"
-            >Add Facility
-              
-            </Button> */}
 
             <Modal.Footer>
                     <Button type="submit" slot="close" className={"bg-orange-600"}>
