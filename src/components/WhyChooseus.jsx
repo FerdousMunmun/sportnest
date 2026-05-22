@@ -41,18 +41,7 @@ const WhyChooseUs = () => {
         Why Choose SportNest?
       </h2>
 
-      {/* Search Field */}
-      {/* <div className="flex justify-center mt-6">
-        <input
-          type="text"
-          placeholder="Search features..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="border px-4 py-3 rounded-xl w-[300px] outline-none focus:border-orange-500"
-        />
-      </div> */}
-
-      {/* Cards */}
+     
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10"
         variants={containerVariants}
