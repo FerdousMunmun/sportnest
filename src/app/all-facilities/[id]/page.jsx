@@ -94,20 +94,10 @@ description} = facility
                 {slots}
               </p>
             </div>
- <BookingCard facility={facility}/>
-            {/* <div className="bg-slate-100 rounded-2xl p-5 col-span-2">
-              <h3 className="text-sm text-slate-500 font-semibold">
-                Price Per Hour
-              </h3>
-
-              <p className="text-xl font-black text-orange-500 mt-2">
-                ${price}
-              </p>
-            </div> */}
+             <BookingCard facility={facility}/>
+        
           </div>
 
-          {/* Button */}
-     
         </div>
 
        
