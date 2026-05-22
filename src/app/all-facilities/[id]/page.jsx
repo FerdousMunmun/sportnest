@@ -43,7 +43,7 @@ description} = facility
         {/* Left Side Image */}
         <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl">
           <Image
-            src={imageUrl || null}
+            src={imageUrl}
             alt={facilityName}
             fill
             className="object-cover"
